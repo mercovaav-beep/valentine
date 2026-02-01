@@ -126,9 +126,19 @@ function yes() {
 }
 
 function no() {
-  const cat = document.getElementById("cat");
-  cat.classList.add("explode");
-  document.getElementById("buttons").classList.add("hidden");
+ const container = document.getElementById("buttons");
+  const btn = document.getElementById("noBtn");
+
+  const containerRect = container.getBoundingClientRect();
+  const btnRect = btn.getBoundingClientRect();
+
+  const maxX = containerRect.width - btnRect.width;
+  const maxY = containerRect.height - btnRect.height;
+
+  const x = Math.random() * maxX;
+  const y = Math.random() * maxY;
+
+  btn.style.transform = `translate(${x}px, ${y}px)`;
   document.getElementById("text").innerText = "OH NO 💥";
 }
 </script>
