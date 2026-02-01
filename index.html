@@ -113,14 +113,15 @@ noBtn.addEventListener("mouseenter", () => {
 });
 
 function yes() {
-    document.getElementById("buttons").classList.add("hidden");
+   document.getElementById("buttons").classList.add("hidden");
   document.getElementById("text").innerText = "Yaaay! ❤️";
   document.getElementById("result").classList.remove("hidden");
   document.getElementById("result").innerHTML = `
-    <img 
-      src="https://media.tenor.com/…if"
-      style="max-width: 100%; height: auto;"
-      alt="Fireworks">
+    <div style="font-size: 40px; line-height: 1.4;">
+      🎆🎇✨🎆🎇<br>
+      💖💖💖<br>
+      🎇🎆✨🎇🎆
+    </div>
   `;
 }
 
